@@ -7,7 +7,7 @@ package send.sms.service.requests;
  * @author gurunath k
  *
  */
-public class CreateUserRequest {
+public class RegisterUserRequest {
 	
 	private String firstName;
 	private String middleName;

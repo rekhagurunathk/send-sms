@@ -7,7 +7,7 @@ package send.sms.service.response;
  * @author gurunath k
  *
  */
-public class CreateuserResponse {
+public class RegisterUserResponse {
 	
 	private String status;
 	private Integer code;
