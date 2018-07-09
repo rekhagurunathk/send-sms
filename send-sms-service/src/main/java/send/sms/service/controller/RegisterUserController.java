@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import send.sms.service.requests.CreateUserRequest;
-import send.sms.service.response.CreateuserResponse;
+import send.sms.service.requests.RegisterUserRequest;
+import send.sms.service.response.RegisterUserResponse;
 
 /**
  * @author gurunath k
@@ -19,7 +19,7 @@ import send.sms.service.response.CreateuserResponse;
 
 @RestController
 @RequestMapping("/user")
-public class CreateUserController {
+public class RegisterUserController {
 	
 	 private static final String SUCCESS_STATUS = "success";
 	 private static final String ERROR_STATUS = "error";
@@ -27,10 +27,10 @@ public class CreateUserController {
 	 private static final int CODE_FAILURE = 400;
 	 
 	@SuppressWarnings("unused")
-	@RequestMapping(value = "/createuser", method = RequestMethod.POST)
-	 public CreateuserResponse createuser(@RequestBody CreateUserRequest request) 
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	 public RegisterUserResponse register(@RequestBody RegisterUserRequest request) 
 	 {
-		 CreateuserResponse response = new CreateuserResponse();
+		 RegisterUserResponse response = new RegisterUserResponse();
 	 
 	   String firstName = request.getFirstName();
 	   String middleName = request.getMiddleName();
